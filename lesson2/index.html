@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP Timeline</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="scene">
+        <div id="circle"></div>
+        <div id="box"></div>
+        <div id="triangle"></div>
+        <p id="label">watch the magic</p>
+    </div>
+
+    <!-- controls to demo play/pause/reverse/seek/timeScale/progress -->
+    <div id="controls">
+        <button type="button" onclick="tl.play()">play</button>
+        <button type="button" onclick="tl.pause()">pause</button>
+        <button type="button" onclick="tl.reverse()">reverse</button>
+        <button type="button" onclick="tl.restart()">restart</button>
+        <button type="button" onclick="tl.seek('spinTime')">seek → spinTime label</button>
+        <button type="button" onclick="tl.timeScale(2)">2x speed</button>
+        <button type="button" onclick="tl.timeScale(0.5)">0.5x speed</button>
+        <button type="button" onclick="tl.progress(0.5)">jump 50%</button>
+    </div>
+
+    <!-- scrubber — drag to manually control progress -->
+    <div id="scrubber-wrap">
+        <label>scrub: <input id="scrubber" type="range" min="0" max="100" value="0"></label>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

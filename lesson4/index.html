@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4 — GSAP Showcase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">GSAP</div>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#solar">Solar</a></li>
+            <li><a href="#concepts">Concepts</a></li>
+            <li><a href="#cta">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ── HERO ───────────────────────────────────────────────── -->
+    <section id="hero">
+        <div class="hero-bg">
+            <div class="blob b1"></div>
+            <div class="blob b2"></div>
+            <div class="blob b3"></div>
+        </div>
+        <div class="hero-content">
+            <p class="hero-tag">Lesson 4 &middot; GSAP Showcase</p>
+            <h1 class="hero-title">
+                <span>Build.</span>
+                <span>Animate.</span>
+                <span>Ship.</span>
+            </h1>
+            <p class="hero-sub">Everything from lessons 1&ndash;3 combined into one beautiful page.</p>
+            <a href="#solar" class="hero-cta">Explore &darr;</a>
+        </div>
+        <div class="scroll-hint">&darr;</div>
+    </section>
+
+    <!-- ── SOLAR SYSTEM ────────────────────────────────────────── -->
+    <section id="solar">
+        <div class="solar-text">
+            <h2>Lesson 1<br><span>Core Tweens</span></h2>
+            <p>Orbits built with <code>transformOrigin</code>, looped forever with <code>repeat: -1</code>.</p>
+            <ul>
+                <li>gsap.to() &amp; gsap.from()</li>
+                <li>repeat &amp; yoyo</li>
+                <li>stagger</li>
+                <li>transformOrigin orbit</li>
+            </ul>
+        </div>
+        <div id="solarSystem">
+            <div class="orbit-ring r1"></div>
+            <div class="orbit-ring r2"></div>
+            <div class="orbit-ring r3"></div>
+            <div id="sun"></div>
+            <div id="mercury"></div>
+            <div id="earth"></div>
+            <div id="mars"></div>
+        </div>
+    </section>
+
+    <!-- ── CONCEPTS CARDS ──────────────────────────────────────── -->
+    <section id="concepts">
+        <h2 class="concepts-title">What You've <span>Learned</span></h2>
+        <div class="cards-grid">
+
+            <!-- 01: to / from — dot moves right then left -->
+            <div class="card">
+                <div class="demo demo-tofrom">
+                    <div class="d-track"><div class="d1-dot"></div></div>
+                    <p class="d1-label">gsap.to() &rarr;</p>
+                </div>
+                <div class="card-num">01</div>
+                <h3>gsap.to / from</h3>
+                <p>Animate to a target state or from a starting state.</p>
+            </div>
+
+            <!-- 02: fromTo — mover travels from ghost to solid -->
+            <div class="card">
+                <div class="demo demo-fromto">
+                    <div class="d2-from-state">FROM</div>
+                    <div class="d2-to-state">TO</div>
+                    <div class="d2-mover"></div>
+                </div>
+                <div class="card-num">02</div>
+                <h3>gsap.fromTo()</h3>
+                <p>Full control — define both the start and end explicitly.</p>
+            </div>
+
+            <!-- 03: Timeline — three boxes enter one after another -->
+            <div class="card">
+                <div class="demo demo-timeline">
+                    <div class="d3-seq">
+                        <div class="d3-sq s1"></div>
+                        <div class="d3-sq s2"></div>
+                        <div class="d3-sq s3"></div>
+                    </div>
+                    <p class="d-label">sequence &rarr;</p>
+                </div>
+                <div class="card-num">03</div>
+                <h3>Timeline</h3>
+                <p>Sequence tweens with defaults, labels, and position params.</p>
+            </div>
+
+            <!-- 04: Stagger — bars grow up one by one -->
+            <div class="card">
+                <div class="demo demo-stagger">
+                    <div class="d4-bars">
+                        <div class="d4-bar"></div>
+                        <div class="d4-bar"></div>
+                        <div class="d4-bar"></div>
+                        <div class="d4-bar"></div>
+                        <div class="d4-bar"></div>
+                    </div>
+                </div>
+                <div class="card-num">04</div>
+                <h3>Stagger</h3>
+                <p>Cascade animations across many elements effortlessly.</p>
+            </div>
+
+            <!-- 05: ScrollTrigger — thumb scrolls down, box pops in at trigger line -->
+            <div class="card">
+                <div class="demo demo-scroll">
+                    <div class="d5-scrollbar"><div class="d5-thumb"></div></div>
+                    <div class="d5-content">
+                        <div class="d5-filler"></div>
+                        <div class="d5-trigger-line"><span>trigger</span></div>
+                        <div class="d5-box"></div>
+                    </div>
+                </div>
+                <div class="card-num">05</div>
+                <h3>ScrollTrigger</h3>
+                <p>Fire timelines based on scroll position — one trigger per timeline.</p>
+            </div>
+
+            <!-- 06: Callbacks — log lines appear in order -->
+            <div class="card">
+                <div class="demo demo-callbacks">
+                    <div class="d6-terminal">
+                        <div class="d6-line l1"><span>&#9654;</span> onStart</div>
+                        <div class="d6-line l2"><span>&#8635;</span> onUpdate</div>
+                        <div class="d6-line l3"><span>&#10003;</span> onComplete</div>
+                    </div>
+                </div>
+                <div class="card-num">06</div>
+                <h3>Callbacks</h3>
+                <p>Run any JS at onStart, onComplete, onUpdate, onRepeat.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ── CTA ─────────────────────────────────────────────────── -->
+    <section id="cta">
+        <div class="cta-bg">
+            <div class="blob b4"></div>
+        </div>
+        <div class="cta-section">
+            <h2>Keep Animating.</h2>
+            <p>You've got the foundation — now build something awesome.</p>
+            <a href="#hero" class="hero-cta">Back to Top &uarr;</a>
+        </div>
+    </section>
+
+    <section id="try">
+        <div id="big">
+
+        </div>
+
+    </section>
+
+    <section id="again">
+        <h1 id="left">
+            Keep Animating.
+        </h1>
+
+    </section>
+
+
+    <section id="empty">
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script>gsap.registerPlugin(ScrollTrigger);</script>
+    <script src="app.js"></script>
+</body>
+</html>
