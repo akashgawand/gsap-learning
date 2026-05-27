@@ -724,3 +724,67 @@ nav a:hover { color: var(--text); }
     justify-content: center;
     width: 100%;
 }
+
+
+.container{
+    display:flex;
+    height:100vh;
+    width:100%;
+    gap:150px;
+    align-items:center;
+     justify-content:center;
+}
+
+.box-wrapper{
+    position:relative;
+    width:200px;
+    height:200px;
+
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.dot{
+    width:10px;
+    height:10px;
+    background:red;
+    border-radius:50%;
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+}
+
+.box{
+    width:100px;
+    height:60px;
+
+    background:#00aaff;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:10px;
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translateY(-50%);
+}
+
+.b1{
+    left:50px;
+}
+
+.b2{
+    left:50px;
+}
+
+.b3{
+    left:100px;
+}

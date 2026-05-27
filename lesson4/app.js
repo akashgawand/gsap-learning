@@ -213,3 +213,32 @@ gsap.to("#again h1", {
 //         }
 //     }
 // );
+
+
+// Default center rotation
+gsap.to(".b1", {
+    rotation: 360,
+    duration: 2,
+    repeat: -1,
+    ease: "none"
+})
+
+
+// Rotate from left side
+gsap.to(".b2", {
+    rotation: 360,
+    transformOrigin: "0% 50%",
+    duration: 2,
+    repeat: -1,
+    ease: "none"
+})
+
+
+// Rotate around external point
+gsap.to(".b3", {
+    rotation: 360,
+    transformOrigin: "-100px 50%",
+    duration: 2,
+    repeat: -1,
+    ease: "none"
+})
